@@ -1,0 +1,40 @@
+{
+    "name": "tails-of-equestria",
+    "title": "Tails of Equestria",
+    "description": "Un jeu avec des Poneys",
+    "version": "0.0.1",
+    "templateVersion": 2,
+    "author": "Michael Schneider",
+    "minimumCoreVersion": "0.8.4",
+    "compatibleCoreVersion": "0.8.9",
+    "esmodules": ["module/toe.mjs"],
+    "styles": ["styles/toe.css"],
+    "scripts": [],
+    "packs": [
+      {
+        "name": "rules",
+        "label": "Rules",
+        "path": "./packs/rules.db",
+        "entity": "JournalEntry"
+      }
+    ],
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      },
+      {
+        "lang": "fr",
+        "name": "Français",
+        "path": "lang/fr.json"
+      }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "",
+    "secondaryTokenAttribute": "",
+    "url": "https://github.com/iMike-devNplay/foundryvtt-tales-of-equestria/",
+    "license": "LICENSE"
+  }
+  

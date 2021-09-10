@@ -1,0 +1,81 @@
+{
+    "Actor": {
+        "types": ["poney"],
+        "templates": {
+            "attributes": {
+                "body": {
+                "min": 0,
+                "max": 5,
+                "value": 0
+                },
+                "mind": {
+                    "min": 0,
+                    "max": 5,
+                    "value": 0
+                },
+                "charm": {
+                    "min": 0,
+                    "max": 5,
+                    "value": 0
+                },
+                "stamina": {
+                    "currentValue": 0,
+                    "maxValue": 0
+                }
+            }
+        },
+        "poney": {
+            "templates": ["attributes"],
+            "level": 1,
+            "xp": 0,
+            "bio": {
+                "description": ""
+            },
+            "talents": {
+                "main": "",
+                "others": []
+            },
+            "quirks": {
+                "main": "",
+                "others": []
+            },
+            "cutieMark": {
+                "label": "",
+                "description": ""
+            },
+            "friendship": 0,
+            "elementOfHarmony": "",
+            "ponyType": "",
+            "money": 0,
+            "isCreated": false
+        }
+    },
+    "Item": {
+        "types": ["talents", "quirks", "ponyTypes", "item"],
+        "talents": {
+            "description": "",
+            "isOwned": false,
+            "isTalent": true,
+            "level": 1,
+            "restrictedTo": []
+        },
+        "quirks": {
+            "description": "",
+            "isOwned": false,
+            "isQuirk": true
+        },
+        "ponyTypes": {
+            "description": "",
+            "isOwned": false,
+            "isPonyType": true
+        },
+        "item": {
+            "description": "",
+            "isOwned": false,
+            "isItem": true,
+            "cost": 0
+        }
+    }
+}
+    
+  
