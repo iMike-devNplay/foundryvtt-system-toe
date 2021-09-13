@@ -1,4 +1,20 @@
 {
     "TOE.attributes": "Attributes",
-    "TOE.force": "Force"
+    "TOE.body": "Body",
+    "TOE.mind": "Mind",
+    "TOE.charm": "Charm",
+    "TOE.stamina": "Stamina",
+    "TOE.level": "Level",
+    "TOE.talent": "Talent",
+    "TOE.talents": "Talents",
+    "TOE.cutiemark": "Cutie Mark",
+    "TOE.quirk": "Quirk",
+    "TOE.quirks": "Quirks",
+    "TOE.friendship": "Friendship",
+    "TOE.elementofharmony": "Element of Harmony",
+    "TOE.poneytype": "Poney Type",
+    "TOE.money": "Money",
+    "TOE.description": "Description",
+    "TOE.item": "Item",
+    "TOE.cost": "Cost"
   }

@@ -7,7 +7,8 @@
 
     // Define template paths to load
     const templatePaths = [
-      "systems/tails-of-equestria/templates/actor/parts/actor-bio.html"
+      "systems/tails-of-equestria/templates/actor/parts/actor-bio.html",
+      "systems/tails-of-equestria/templates/actor/parts/actor-items.html"
     ];
   
     // Load the template parts

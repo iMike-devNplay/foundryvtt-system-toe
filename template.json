@@ -32,7 +32,7 @@
                 "description": ""
             },
             "talents": {
-                "main": "",
+                "fromCutieMark": "",
                 "others": []
             },
             "quirks": {
@@ -41,30 +41,33 @@
             },
             "cutieMark": {
                 "label": "",
-                "description": ""
+                "description": "",
+                "img": null
             },
             "friendship": 0,
             "elementOfHarmony": "",
-            "ponyType": "",
+            "poneyType": "",
             "money": 0,
             "isCreated": false
         }
     },
     "Item": {
-        "types": ["talents", "quirks", "ponyTypes", "item"],
-        "talents": {
+        "types": ["talent", "quirk", "poneyType", "item"],
+        "talent": {
             "description": "",
             "isOwned": false,
             "isTalent": true,
+            "fromCutieMark": false,
             "level": 1,
             "restrictedTo": []
         },
-        "quirks": {
+        "quirk": {
             "description": "",
             "isOwned": false,
-            "isQuirk": true
+            "isQuirk": true,
+            "isMain": false
         },
-        "ponyTypes": {
+        "ponyType": {
             "description": "",
             "isOwned": false,
             "isPonyType": true

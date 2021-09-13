@@ -1,25 +1,148 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+  <!-- Header with logo -->
+  <header>
 
-  {{!-- Sheet Header --}}
-  <header class="sheet-header" style="align-items: start;">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>  
-    </div>
   </header>
 
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="zc-button-sm" data-tab="bio">Biography</a>
-  </nav>
-
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
-    {{!-- Biography Tab --}}
-    <div class="tab biography" data-group="primary" data-tab="bio">
-    {{> "systems/tails-of-equestria/templates/actor/parts/actor-bio.html" }}
+  <!-- Poney id and friendship -->
+  <section>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Poney Name"/></h1>  
     </div>
+    <div class="header-fields">
+      <h1 class="charname"><input name="data.poneyType" type="text" value="{{data.poneyType}}" placeholder="Poney Type"/></h1>  
+    </div>
+    <div class="header-fields">
+      <h1 class="charname"><input name="data.level" type="text" value="{{data.level}}" placeholder="Level"/></h1>  
+    </div>
+    <div class="header-fields">
+      <h1 class="charname"><input name="data.elementOfHarmony" type="text" value="{{data.elementOfHarmony}}" placeholder="Element of Harmony"/></h1>  
+      <h1 class="charname"><input name="data.friendship" type="text" value="{{data.friendship}}" placeholder="Friendship"/></h1>  
+    </div>
+  </section>
+
+  <!-- Stamina -->
+  <section>
+    <div class="attributes grid grid-3col">
+      <label for="data.stamina.maxValue" class="">Robustesse</label>
+      <input type="text" name="data.stamina.maxValue" value="{{data.stamina.maxValue}}" data-dtype="Number"/>
+      <input type="text" name="data.stamina.currentValue" value="{{data.stamina.currentValue}}" data-dtype="Number"/>
+    </div>
+  </section>
+
+  <!-- Attributes -->
+  <section>
+    <div class="attributes grid grid-3col">
+      <label for="data.body.value" class="">BODY</label>
+      <input type="text" name="data.body.value" value="{{data.body.value}}" data-dtype="Number"/>
+    </div>
+
+    <div class="attributes grid grid-3col">
+      <label for="data.mind.value" class="">MIND</label>
+      <input type="text" name="data.mind.value" value="{{data.mind.value}}" data-dtype="Number"/>
+    </div>
+
+    <div class="attributes grid grid-3col">
+      <label for="data.charm.value" class="">CHARME</label>
+      <input type="text" name="data.charm.value" value="{{data.charm.value}}" data-dtype="Number"/>
+    </div>
+  </section>
+
+  <!-- Portrait , talents, quirks and beauty mark -->
+  <section>
+    <!-- Portrait -->
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    
+    <!-- Talents -->
+    <div class="talents grid grid-3col">
+      <label for="data.talents.fromCutieMark" class="">TALENTS</label>
+      <ul>
+        {{#each actor.items as |item key|}}
+          {{#if item.data.data.fromCutieMark}}
+          <li class="item flexrow" data-item-id="{{item.id}}">
+              <div>Cuty Mark: </div>
+              <div class="item-name flexrow">
+                <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                  <h4>
+                      {{item.name}}
+                  </h4>
+              </div>
+              <div class="item-controls flexrow">
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+              </div>
+          </li>
+          {{/if}}
+        {{/each}}
+        {{#each actor.items as |item key|}}
+          {{#unless item.data.data.fromCutieMark}}
+          <li class="item flexrow" data-item-id="{{item.id}}">
+              <div>T: </div>
+              <div class="item-name flexrow">
+                <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                  <h4>
+                      {{item.name}}
+                  </h4>
+              </div>
+              <div class="item-controls flexrow">
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+              </div>
+          </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <!-- Quirks-->
+    <div class="quirks grid grid-3col">
+      <label for="data.quirks.main" class="">QUIRKS</label>
+      <ul>
+        <li>
+          <h4>Principal :</h4>{{data.quirks.main}}
+        </li>
+        {{#each data.quirks.others as |item key|}}
+          <li class="item flexrow" data-item-id="{{item.id}}">
+              <div class="item-name flexrow">
+                  <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                  <h4>
+                      {{item.name}}
+                  </h4>
+              </div>
+              <div class="item-controls flexrow">
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+              </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <!-- Cutie Mark -->
+    <div class="quirks grid grid-3col">
+      <label for="data.cutyMark.img" class="">CUTIE MARK</label>
+      <h5>{{data.cutyMark.label}}</h5>
+      <img class="profile-img" src="{{data.cutyMark.img}}" data-edit="img" title="{{data.cutyMark.label}}" height="100" width="100"/>
+    </div>
+  </section>
+
+  <section>
+      <ol class="item-list">
+        {{#each actor.items as |item key|}}
+          <li class="item flexrow" data-item-id="{{item.id}}">
+              <div class="item-name flexrow">
+                <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+                  <h4>
+                      {{item.name}}
+                  </h4>
+              </div>
+              <div class="item-controls flexrow">
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title='Delete'><i class="fas fa-trash"></i></a>
+              </div>
+          </li>
+        {{/each}}
+      </ol>
   </section>
 </form>
   

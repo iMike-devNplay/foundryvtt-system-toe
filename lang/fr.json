@@ -1,4 +1,20 @@
 {
-    "TOE.attributes": "Attributs",
-    "TOE.force": "Force"
-  }
+  "TOE.attributes": "Attributs",
+  "TOE.body": "Corps",
+  "TOE.mind": "Esprit",
+  "TOE.charm": "Charme",
+  "TOE.stamina": "Robustesse",
+  "TOE.level": "Niveau",
+  "TOE.talent": "Talent",
+  "TOE.talents": "Talents",
+  "TOE.cutiemark": "Marque de beauté",
+  "TOE.quirk": "Défaut",
+  "TOE.quirks": "Défauts",
+  "TOE.friendship": "Aminité",
+  "TOE.elementofharmony": "Elément d'équilibre",
+  "TOE.poneytype": "Type de poney",
+  "TOE.money": "Argent",
+  "TOE.description": "Description",
+  "TOE.item": "Objet",
+  "TOE.cost": "Coût"
+}

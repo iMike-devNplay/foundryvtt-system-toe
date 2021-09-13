@@ -34,6 +34,8 @@
         this._prepareItems(context);
         this._prepareCharacterData(context);
       }
+
+      console.log(actorData);
       // Prepare active effects
       //context.effects = prepareActiveEffectCategories(this.actor.effects);
       return context;
