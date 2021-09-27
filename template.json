@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["poney"],
+        "types": ["poney", "pnj"],
         "templates": {
             "attributes": {
                 "body": {
@@ -49,6 +49,9 @@
             "poneyType": "",
             "money": 0,
             "isCreated": false
+        },
+        "pnj": {
+            "templates": ["attributes"]
         }
     },
     "Item": {

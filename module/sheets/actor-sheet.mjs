@@ -8,7 +8,7 @@
     static get defaultOptions() {
       return foundry.utils.mergeObject(super.defaultOptions, {
         classes: ["toe", "sheet", "actor"],
-        template: "systems/tails-of-equestria/templates/actor-sheet.html",
+        template: "systems/tails-of-equestria/templates/actor/actor-poney-sheet.html",
         width: 720,
         height: 750,
         tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "actions"}]
