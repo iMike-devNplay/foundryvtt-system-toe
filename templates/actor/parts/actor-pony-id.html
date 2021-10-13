@@ -1,0 +1,45 @@
+<section class="grid grid-2col">
+  <section class="grid grid-2col">
+    <label for="actor.name" class="">Nom du poney : </label>
+    <input name="name" type="text" value="{{actor.name}}" placeholder="Pony Name"/>
+    
+    <label for="data.ponyType" class="">Type de poney : </label>
+    <ul class="items-list">
+      {{#each actor.items as |item key|}}
+        {{#if item.data.data.isPonyType}}
+        <li class="item flexrow">
+          <div class="item-name flexrow">
+            <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+              <h4>
+                  {{item.name}}
+              </h4>
+          </div>
+        </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+    
+    <label for="data.level" class="">Niveau : </label>
+    <input name="data.level" type="text" value="{{data.level}}" placeholder="Level"/>  
+    
+    <label for="data.elementOfHarmony" class="">Elément d'équilibre : </label>
+    <ul class="items-list">
+      {{#each actor.items as |item key|}}
+        {{#if item.data.data.isElementOfHarmony}}
+        <li class="item flexrow">
+          <div class="item-name flexrow">
+            <div class="item-image" style="background-image: url('{{item.img}}')"></div>
+              <h4>
+                  {{item.name}}
+              </h4>
+          </div>
+        </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </section>
+  <section>
+    <label for="data.friendship" class="">Amitié</label>
+    <input name="data.friendship" type="text" value="{{data.friendship}}" placeholder="Friendship"/> 
+  </section>
+</section>

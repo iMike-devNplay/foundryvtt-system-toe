@@ -27,6 +27,7 @@
     getData() {
       const context = super.getData();
       context.data = context.data.data;
+      console.log(context.data);
       return context;
     }
   
@@ -47,6 +48,12 @@
       if (!this.options.editable) return;
   
       // Roll handlers, click handlers, etc. would go here.
+    }
+
+    /** @override */
+    async _onDropItemCreate(itemData) {
+      console.log(itemData);
+
     }
   }
   

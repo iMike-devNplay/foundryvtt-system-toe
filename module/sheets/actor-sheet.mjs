@@ -8,7 +8,7 @@
     static get defaultOptions() {
       return foundry.utils.mergeObject(super.defaultOptions, {
         classes: ["toe", "sheet", "actor"],
-        template: "systems/tails-of-equestria/templates/actor/actor-poney-sheet.html",
+        template: "systems/tails-of-equestria/templates/actor/actor-pony-sheet.html",
         width: 720,
         height: 750,
         tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "actions"}]
@@ -30,7 +30,7 @@
       context.data = actorData.data;
       context.flags = actorData.flags;
         
-      if (actorData.type == 'poney') {
+      if (actorData.type == 'pony') {
         this._prepareItems(context);
         this._prepareCharacterData(context);
       }
@@ -130,8 +130,21 @@
   
     /** @override */
     async _onDropItemCreate(itemData) {
-        itemData.data.isOwned = true;
-        return super._onDropItemCreate(itemData);
+        console.log(itemData);
+        if (itemData.type === "ponyType")
+        {
+          for (const [key, value] of this.actor.items.entries())
+            if (value.type === "ponyType") this.actor.items.get(key).delete();
+          itemData.data.isOwned = true;
+          return super._onDropItemCreate(itemData);
+        }
+        else if (itemData.type === "elementOfHarmony")
+        {
+          for (const [key, value] of this.actor.items.entries()) 
+            if (value.type === "elementOfHarmony") this.actor.items.get(key).delete();
+          itemData.data.isOwned = true;
+          return super._onDropItemCreate(itemData);
+        }
     }
   }
   

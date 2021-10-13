@@ -4,11 +4,37 @@
       <div class="header-fields">
         <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
       </div>
+      <div class="grid grid-1col">
+        <div class="resource">
+          <label class="resource-label">Réservé à : </label>
+          <ul class="items-list">
+            {{#each item.items as |i key|}}
+              {{#if i.data.data.isPonyType}}
+              <li class="item flexrow">
+                <div class="item-name flexrow">
+                  <div class="item-image" style="background-image: url('{{i.img}}')"></div>
+                    <h4>
+                        {{i.name}}
+                    </h4>
+                </div>
+              </li>
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
       {{#if data.isOwned}}
       <div class="grid grid-1col">
         <div class="resource">
           <label class="resource-label">From Cuty Mark</label>
           <input type="checkbox" name="data.fromCutieMark" {{checked data.fromCutieMark}}/>
+        </div>
+      </div>
+      <div class="grid grid-1col">
+        <div class="resource">
+          <label class="resource-label">Niveau : </label>
+          <input name="data.level" type="text" value="{{data.level}}" placeholder="Level"/>
         </div>
       </div>
     {{/if}}    </header>

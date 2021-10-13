@@ -1,6 +1,6 @@
 {
     "Actor": {
-        "types": ["poney", "pnj"],
+        "types": ["pony", "pnj"],
         "templates": {
             "attributes": {
                 "body": {
@@ -24,7 +24,7 @@
                 }
             }
         },
-        "poney": {
+        "pony": {
             "templates": ["attributes"],
             "level": 1,
             "xp": 0,
@@ -46,7 +46,7 @@
             },
             "friendship": 0,
             "elementOfHarmony": "",
-            "poneyType": "",
+            "ponyType": "",
             "money": 0,
             "isCreated": false
         },
@@ -55,7 +55,7 @@
         }
     },
     "Item": {
-        "types": ["talent", "quirk", "poneyType", "item"],
+        "types": ["talent", "quirk", "ponyType", "item", "elementOfHarmony"],
         "talent": {
             "description": "",
             "isOwned": false,
@@ -74,6 +74,13 @@
             "description": "",
             "isOwned": false,
             "isPonyType": true
+        },
+        "elementOfHarmony": {
+            "description": "",
+            "color": "",
+            "lastOwnedByPony": "",
+            "isOwned": false,
+            "isElementOfHarmony": true
         },
         "item": {
             "description": "",

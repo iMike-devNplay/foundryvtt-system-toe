@@ -35,14 +35,14 @@
   
       // Make separate methods for each Actor type (character, npc, etc.) to keep
       // things organized.
-      this._preparePoneyData(actorData);
+      this._preparePonyData(actorData);
     }
   
     /**
      * Prepare Survivor type specific data
      */
-    _preparePoneyData(actorData) {
-      if (actorData.type !== 'poney') return;
+    _preparePonyData(actorData) {
+      if (actorData.type !== 'pony') return;
   
       // Make modifications to data here. For example:
       const data = actorData.data;
